@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-import sys
+from sys import argv
 count = 0
-args = len(sys.argv)
+args = len(argv)
 if args - 1 == 0:
     print("0 arguments.")
 if args - 1 == 1:
@@ -10,4 +10,4 @@ elif args - 1 != 0 and args - 1 != 1:
     print("{} arguments:".format(args - 1))
 for i in range(1, args):
     count = count + 1
-    print("{}: {}".format(count, sys.argv[i]))
+    print("{}: {}".format(count, argv[i]))
