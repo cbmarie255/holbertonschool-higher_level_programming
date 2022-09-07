@@ -2,6 +2,7 @@
 
 """Defining class Square with conditions"""
 
+
 class Square:
     """defining the class named Square"""
     def __init__(self, size=0):
