@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+    Creating a class with conditions and errors raised when applicable
+"""
+
 
 class Rectangle:
     """Creating a class for the rectangle"""
