@@ -8,6 +8,7 @@ class MyList(list):
     def print_sorted(self):
         """Prints the list, but sorted (ascending)"""
         copy_list = self[:]
-        return self.sort()
-        return copy_list
+        copy_list.sort()
+        print(copy_list)
+
 
