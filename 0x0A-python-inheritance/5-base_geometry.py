@@ -2,6 +2,8 @@
 """
     Writing an empty class
 """
+
+
 class BaseGeometry:
     """New class"""
     pass
