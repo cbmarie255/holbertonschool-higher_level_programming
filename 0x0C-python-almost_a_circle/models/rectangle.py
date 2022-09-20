@@ -9,15 +9,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Inherited class that attributes to triangles"""
-    
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """class constructor and initiation"""
-        super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
-        
+
     @property
     def width(self):
         """getter for the width"""
@@ -73,3 +65,11 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """class constructor and initiation"""
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
