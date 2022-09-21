@@ -88,5 +88,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """Using str method to return a message"""
-        message = "[Rectangle] " + "(" + str(self.id) + ")" + " " + str(self.x) + "/" + str(self.y) + " - " + str(self.width) + "/" + str(self.height)
-        return message
+        message = "[Rectangle] ({}) ".format(self.id, end='')
+        message2 = "{}/{} ".format(self.x, self.y, end='')
+        message3 = "- {}/{}".format(self.width, self.height)
+        return message + message2 + message3
