@@ -80,8 +80,12 @@ class Rectangle(Base):
 
     def display(self):
         """prints the Rectangle instance with #"""
+        for y_axis in range(0, self.__y):
+            print()
         for column in range(0, self.__height):
             string = ''
+            for x_axis in range(0, self.__x):
+                string = string + ' '
             for row in range(0, self.__width):
                 string = string + '#'
             print(string)
