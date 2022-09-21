@@ -85,3 +85,8 @@ class Rectangle(Base):
             for row in range(0, self.__width):
                 string = string + '#'
             print(string)
+
+    def __str__(self):
+        """Using str method to return a message"""
+        message = "[Rectangle] " + "(" + str(self.id) + ")" + " " + str(self.x) + "/" + str(self.y) + " - " + str(self.width) + "/" + str(self.height)
+        return message
