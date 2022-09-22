@@ -96,3 +96,19 @@ class Rectangle(Base):
         message2 = "{}/{} ".format(self.x, self.y, end='')
         message3 = "- {}/{}".format(self.width, self.height)
         return message + message2 + message3
+
+    def update(self, *args):
+        """Assigns an argument to each attribute"""
+        count = 0
+        for arg in args:
+            if count == 0:
+                self.id = arg
+            if count == 1:
+                self.width = arg
+            if count == 2:
+                self.height = arg
+            if count == 3:
+                self.x = arg
+            if count == 4:
+                self.y == arg
+            count = count + 1
