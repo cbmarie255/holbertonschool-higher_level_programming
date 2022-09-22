@@ -110,5 +110,5 @@ class Rectangle(Base):
             if count == 3:
                 self.x = arg
             if count == 4:
-                self.y == arg
+                self.y = arg
             count = count + 1
