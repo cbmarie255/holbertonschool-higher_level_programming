@@ -30,7 +30,7 @@ class Base:
         filename = cls.__name__ + ".json"
         newFile = []
         if list_objs is None:
-            return newFile
+            list_objs = []
         for element in list_objs:
             newFile.append(cls.to_dictionary(element))
         with open(filename, 'w', encoding="UTF8") as f:
