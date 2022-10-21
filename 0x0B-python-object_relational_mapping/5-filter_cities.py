@@ -15,8 +15,9 @@ if __name__ == '__main__':
                                 port=3306)
     cursor_jawn = data_base.cursor()
     query = cursor_jawn.execute('''
-                                SELECT cities.name FROM cities LEFT JOIN states 
-                                ON BINARY cities.state_id=states.id WHERE states.name
+                                SELECT cities.name FROM cities LEFT JOIN states
+                                ON BINARY cities.state_id=states.id
+                                WHERE states.name
                                 LIKE %s ORDER BY cities.id ASC
                                 ''', (args[4],))
     row_to_tuple = cursor_jawn.fetchall()
