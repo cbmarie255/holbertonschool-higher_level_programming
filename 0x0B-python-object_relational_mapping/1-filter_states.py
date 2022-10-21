@@ -16,7 +16,7 @@ if __name__ == '__main__':
     cursor_jawn = data_base.cursor()
     query = cursor_jawn.execute('''
                                 SELECT * FROM states
-                                WHERE states.name LIKE 'N%'
+                                WHERE states.name LIKE BINARY 'N%'
                                 ORDER BY states.id ASC
                                 ''')
     row_to_tuple = cursor_jawn.fetchall()
