@@ -17,7 +17,7 @@ if __name__ == '__main__':
     cursor_jawn = data_base.cursor()
     query = cursor_jawn.execute('''
                                 SELECT * FROM states
-                                WHERE states.name = '{}'
+                                WHERE states.name LIKE BINARY '{}'
                                 ORDER BY states.id ASC
                                 '''.format(searched_state))
     row_to_tuple = cursor_jawn.fetchall()
