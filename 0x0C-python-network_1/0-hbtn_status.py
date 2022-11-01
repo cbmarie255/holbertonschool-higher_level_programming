@@ -4,14 +4,10 @@
 """
 import urllib.request
 
-
 if __name__ == '__main__':
-<<<<<<< HEAD
     url = 'https://intranet.hbtn.io/status/'
-=======
     import urllib.request
     url = 'https://intranet.hbtn.io/status'
->>>>>>> ac673655884a592381a36c0e6f6db1d44994d14a
     with urllib.request.urlopen(url) as response:
         html = response.read()
         content = html.decode('utf-8')
