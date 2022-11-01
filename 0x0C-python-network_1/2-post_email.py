@@ -9,4 +9,7 @@ import requests
 if __name__ == '__main__':
     url = argv[1]
     email = argv[2]
-    posty = requests.post(url, )
+    email_obj = {'email': email}
+    posty = requests.post(url, data=email_obj)
+    with urllib.request.urlopen(posty) as response:
+        print(response.read().decode('utf-8'))
