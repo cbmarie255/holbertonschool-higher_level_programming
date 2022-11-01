@@ -5,11 +5,9 @@
 from sys import argv
 import urllib.request
 
-
 if __name__ == '__main__':
     url = argv[1]
     requesting = urllib.request.Request(url)
     with urllib.request.urlopen(requesting) as response:
         page = response.read()
-        r = urllib.requests.get(url)
-        print(r.headers['X-Request-Id'])
+    
