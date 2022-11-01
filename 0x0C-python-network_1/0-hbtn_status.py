@@ -7,11 +7,12 @@ import urllib.request
 
 
 if __name__ == '__main__':
-    with urllib.request.urlopen('https://intranet.hbtn.io/status/') as response:
+    url = 'https://intranet.hbtn.io/status/'
+    with urllib.request.urlopen(url) as response:
         html = response.read()
         content = html.decode('utf-8')
-        message_str = '''Body response:\n 
-                        \t - type: {}\n 
-                        \t - content: {}\n 
-                        \t - utf8 content: {}\n'''.format(type(html), html, content)
+        message_str = f'''Body response:\n
+                    \t - type: {type(html)}\n
+                    \t - content: {html}\n
+                    \t - utf8 content: {content}\n'''
         print(message_str)
