@@ -9,5 +9,5 @@ if __name__ == '__main__':
     url = argv[1]
     requesting = urllib.request.Request(url)
     with urllib.request.urlopen(requesting) as response:
-        page = response.read()
-    
+        status = response.read()
+        print(response.info().getheader('X-Request-Id'))
