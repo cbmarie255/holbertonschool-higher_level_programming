@@ -15,4 +15,4 @@ if __name__ == '__main__':
 \t- type: {}
 \t- content: {}
 \t- utf8 content: {}'''.format(type(html), html, content)
-        print(message_str)
+    print(message_str)
