@@ -5,11 +5,8 @@ class Square extends square {
     super(size, size);
   }
 
-  charPrint (c) {
-    if (c === undefined) {
-      c = 'X';
-    }
-    this.print(c);
+  charPrint (c = 'X') {
+    for (let character = 0; character < this.height; character++)
   }
 }
 module.exports = Square;
