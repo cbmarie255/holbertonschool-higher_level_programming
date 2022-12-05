@@ -6,7 +6,7 @@ class Square extends square {
   }
 
   charPrint (c = 'X') {
-    for (let character = 0; character < this.height; character++)
+    for (let character = 0; character < this.height; character++) { console.log(c.repeat(this.width)); }
   }
 }
 module.exports = Square;
